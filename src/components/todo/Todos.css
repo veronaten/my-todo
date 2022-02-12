@@ -1,0 +1,40 @@
+.todos-wrapper {
+  margin-top: 30px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  
+}
+
+.todos-text {
+  min-height: 30px;
+  padding: 10px;
+  width: 240px;
+  background-color: #fff;
+  border-radius: 8px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.todos-button {
+  height: 50px;
+  width: 90px;
+  background-color: #f5afd5;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.todos-button:hover {
+  cursor: pointer;
+}
+
+.todos__no-text {
+  margin-top: 30px;
+}

@@ -1,6 +1,7 @@
 import React from "react"
 import Todos from "./Todos"
 import InputBar from "./InputBar"
+import "./TodoTable.css"
 
 class TodoTable extends React.Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class TodoTable extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="todo-wrapper">
         <InputBar addTodo={this.addTodo}/>
         <Todos deleteTodo={this.deleteTodo} todos={this.state.todos}/>
       </div>

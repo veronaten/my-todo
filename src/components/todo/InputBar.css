@@ -1,0 +1,28 @@
+.inputbar-input {
+  margin-right: 50px;
+  padding: 10px;
+  height: 30px;
+  width: 240px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(89, 233, 233);
+}
+
+.inputbar-button {
+  height: 50px;
+  width: 90px;
+  background-color: #f5afd5;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.inputbar-button:hover {
+  cursor: pointer;
+}

@@ -1,10 +1,9 @@
-
 import './App.css';
 import TodoTable from './components/todo/TodoTable';
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <TodoTable />
     </div>
   );

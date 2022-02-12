@@ -1,4 +1,5 @@
 import React from "react";
+import "./InputBar.css";
 
 class InputBar extends React.Component {
   constructor(props) {
@@ -19,10 +20,13 @@ class InputBar extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>Enter your Todo:</p>
-        <input value={this.state.content} onChange={this.handleChange}/>
-        <button type="button" onClick={this.buttonHandle} >Add Todo</button>
+      <div className="inputbar-wrapper">
+        <h3>Enter your Todo:</h3>
+        <input 
+          className="inputbar-input" 
+          value={this.state.content} 
+          onChange={this.handleChange}/>
+        <button className="inputbar-button" type="button" onClick={this.buttonHandle} >Add Todo</button>
       </div>
     )
   }
