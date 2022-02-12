@@ -10,11 +10,18 @@ class TodoTable extends React.Component {
     ]
   }
 
+  deleteTodo = (id) => {
+    const todos = this.state.todos.filter(todo => {
+      return todo.id !== id
+    })
+    this.setState({todos: todos})
+  }
+
   render() {
     return (
       <div>
         <InputBar />
-        <Todos todos={this.state.todos}/>
+        <Todos deleteTodo={this.deleteTodo} todos={this.state.todos}/>
       </div>
     )
   }
