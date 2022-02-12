@@ -19,6 +19,7 @@ class InputBar extends React.Component {
   }
 
   render() {
+    const noEmptyString = this.state.content;
     return (
       <div className="inputbar-wrapper">
         <h3>Enter your Todo:</h3>
@@ -26,7 +27,14 @@ class InputBar extends React.Component {
           className="inputbar-input" 
           value={this.state.content} 
           onChange={this.handleChange}/>
-        <button className="inputbar-button" type="button" onClick={this.buttonHandle} >Add Todo</button>
+        {noEmptyString && (
+        <button 
+          className="inputbar-button" 
+          type="button" 
+          onClick={this.buttonHandle} 
+        >
+          Add Todo
+        </button>)}
       </div>
     )
   }
