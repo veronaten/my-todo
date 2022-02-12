@@ -14,6 +14,7 @@ class InputBar extends React.Component {
 
   buttonHandle() {
     this.setState({content: ''});
+    this.props.addTodo(this.state)
   }
 
   render() {

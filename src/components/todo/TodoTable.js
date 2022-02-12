@@ -17,10 +17,16 @@ class TodoTable extends React.Component {
     this.setState({todos: todos})
   }
 
+  addTodo = (todo) => {
+    todo.id = new Date().toString();
+    const todos = [...this.state.todos, todo]
+    this.setState({todos: todos})
+  }
+
   render() {
     return (
       <div>
-        <InputBar />
+        <InputBar addTodo={this.addTodo}/>
         <Todos deleteTodo={this.deleteTodo} todos={this.state.todos}/>
       </div>
     )
