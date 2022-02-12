@@ -4,10 +4,7 @@ import InputBar from "./InputBar"
 
 class TodoTable extends React.Component {
   state = {
-    todos: [
-      {id: 1, content: 'do tasks'},
-      {id: 2, content: 'learn React'}
-    ]
+    todos: []
   }
 
   deleteTodo = (id) => {
