@@ -5,11 +5,15 @@ class InputBar extends React.Component {
     super(props);
     this.state = {content: ''}
     this.handleChange = this.handleChange.bind(this)
+    this.buttonHandle = this.buttonHandle.bind(this)
   }
 
   handleChange(e) {
     this.setState({content: e.target.value})
-    console.log(e.target.value)
+  }
+
+  buttonHandle() {
+    this.setState({content: ''});
   }
 
   render() {
@@ -17,7 +21,7 @@ class InputBar extends React.Component {
       <div>
         <p>Enter your Todo:</p>
         <input value={this.state.content} onChange={this.handleChange}/>
-        <button type="button" >Add Todo</button>
+        <button type="button" onClick={this.buttonHandle} >Add Todo</button>
       </div>
     )
   }
