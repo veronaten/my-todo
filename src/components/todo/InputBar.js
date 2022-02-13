@@ -7,6 +7,7 @@ class InputBar extends React.Component {
     this.state = {content: ''}
     this.handleChange = this.handleChange.bind(this)
     this.buttonHandle = this.buttonHandle.bind(this)
+    this.formHandler = this.formHandler.bind(this)
   }
 
   handleChange(e) {
@@ -18,10 +19,17 @@ class InputBar extends React.Component {
     this.props.addTodo(this.state)
   }
 
+  formHandler(e) {
+    e.preventDefault();
+    this.setState({content: e.target.value})
+    this.setState({content: ''});
+    this.props.addTodo(this.state)
+  }
+
   render() {
     const noEmptyString = this.state.content;
     return (
-      <div className="inputbar-wrapper">
+      <form  onSubmit={this.formHandler} className="inputbar-wrapper">
         <h3>Enter your Todo:</h3>
         <input 
           className="inputbar-input" 
@@ -35,7 +43,7 @@ class InputBar extends React.Component {
         >
           Add Todo
         </button>)}
-      </div>
+      </form>
     )
   }
 }
