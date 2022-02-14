@@ -4,17 +4,32 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
+  align-items: center;
   
 }
 
-.todos-text {
-  min-height: 30px;
+textarea.todos-text {
+  display: block;
+  height: 30px;
   padding: 10px;
   width: 240px;
   background-color: #fff;
   border-radius: 8px;
+  border: none;
   line-height: 1.6;
   text-align: left;
+  resize: none;
+  font-size: 16px;
+  align-items: center;
+}
+
+.todos-text-checked {
+  background-color: rgb(240, 147, 147);
+}
+
+.todos_checkbox {
+  width: 17px;
+  height: 17px;
 }
 
 .todos-button {
